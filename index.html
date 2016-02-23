@@ -3,25 +3,82 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Crystal Collector!</title>
-	<link rel="stylesheet" href="http://bootswatch.com/sandstone/bootstrap.min.css">
+	<link rel="stylesheet" href="http://bootswatch.com/darkly/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-	<h1>Crystal Collector!</h1>
-</header>
+
 <div class="container">
+	<header>
+		<h1>Crystals Collector!</h1>
+	</header>
 	<div class="row">
+		<div class="alert alert-info instructions">
+			<p>You will be given a random number at the start of the game.</p>
+			<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+			<p>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</p>
+			<p>The value of each crystal is hidden from you until you click on it.</p>
+			<p>Each time the game restarts, a new target number and gem values will be assigned.</p>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row gems">
 		<div class="col-md-12 text-center">
 			<ul class="list-inline">
-				<li><img src="assets/img/red.png" alt="red" /></li>
-				<li><img src="assets/img/yellow.png" alt="yellow" /></li>
-				<li><img src="assets/img/green.png" alt="green" /></li>
-				<li><img src="assets/img/blue.png" alt="blue" /></li>
+				<li><img src="assets/img/red.png" alt="red" id="red" class="crystal" /></li>
+				<li><img src="assets/img/yellow.png" alt="yellow" id="yellow" class="crystal" /></li>
+				<li><img src="assets/img/green.png" alt="green" id="green" class="crystal" /></li>
+				<li><img src="assets/img/blue.png" alt="blue" id="blue" class="crystal" /></li>
 			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row scoreboard">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2>Goal</h2>
+				</div>
+				<div class="panel-body">
+					<div id="goal"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2>Your Total Score</h2>
+				</div>
+				<div class="panel-body">
+					<div id="score"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row results">
+		<div class="col-md-6">
+			<p id="status"></p>
+		</div>
+		<div class="col-md-6">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>wins</th>
+						<th>losses</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="wins">--</td>
+						<td id="losses">--</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>

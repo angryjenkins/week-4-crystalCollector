@@ -1,6 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 20px;
+	background-repeat: repeat;
+}
+
+h1 {
+	font-size: 30px;
+}
+
 header {
 	text-align: center;
 	padding: 60px;
+}
+
+.instructions>p {
+	padding: 12px 0;
+}
+
+.gems {
+	margin: 24px;
+	height:200px;
+	/*background-image: url("../../assets/img/background_img.jpg");*/
+}
+ul {
+	background-repeat: repeat;
 }
 
 ul>li{
@@ -8,6 +34,6 @@ ul>li{
 }
 
 ul>li:hover{
-	border-top: 6px solid #727171;
+	border-top: 3px solid #727171;
 	border-bottom: 3px solid #727171;
 }
