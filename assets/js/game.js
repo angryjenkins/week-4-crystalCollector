@@ -22,7 +22,6 @@
 		
 
 	function render() {
-
 		statusDisplay.html("Start collecting!");
 		goalDisplay.html(collect.goal);
 		scoreDisplay.html(collect.score);
@@ -45,12 +44,13 @@
 		lossDisplay.html(losses);
 	}
 
-	//on click.
 	render();
 
+	//on click.
 	$(".crystal").click(function(event) {
 		var crystalID = event.target.id;
 		console.log("you clicked the " + event.target.id + " crystal.");
+		//i tried to use one click function for all of the crystals here using a commin class, but didn't know how to plug the ID into the collect object, so I used a IF statement.
 
 		if(event.target.id == "red"){
 			collect.score+=collect.red;
@@ -68,15 +68,17 @@
 		//WIN
 			statusDisplay.html("<span class='text-success'>You got it! " + collect.goal + " is correct.</span>");
 			wins++;
-			winDisplay.html(wins);
+			winDisplay.html("<span class='text-success'>" + wins + "</span>");
+			//if you continue clicking during the reset timer, you can contiue to get losses.
 			setTimeout(reset,3000);
 
 		} else if(collect.score > collect.goal){
 			statusDisplay.html("<span class='text-danger'>Busted! You went over " + collect.goal + "</span>");
 			losses++;
-			lossDisplay.html(losses);
+			lossDisplay.html("<span class='text-danger'>" + losses + "</span>");
+			//if you continue clicking during the reset timer, you can contiue to get losses.
 			setTimeout(reset,3000);
-			game.score = 0;
+
 		} else {
 			if (collect.goal - collect.score < 20){
 				statusDisplay.html("<span class='text-warning'>You are getting dangerously close to "+collect.goal + "...</span>");
