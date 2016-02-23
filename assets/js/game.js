@@ -1,6 +1,8 @@
 
 	//make an object for the collect.
-	var collect = {
+
+	
+		collect = {
 			goal: Math.floor(Math.random() * 120) + 19,  
 			red: Math.floor(Math.random() * 12) + 1,
 			yellow: Math.floor(Math.random() * 12) + 1,
@@ -29,14 +31,13 @@
 	};
 
 	function reset(){
-		var collect = {
-			goal: Math.floor(Math.random() * 120) + 19,  
-			red: Math.floor(Math.random() * 12) + 1,
-			yellow: Math.floor(Math.random() * 12) + 1,
-			green: Math.floor(Math.random() * 12) + 1,
-			blue: Math.floor(Math.random() * 12) + 1,
-			score: 0
-		};
+		collect.goal = Math.floor(Math.random() * 120) + 19;  
+		collect.score = 0;
+		collect.red = Math.floor(Math.random() * 12) + 1;
+		collect.yellow = Math.floor(Math.random() * 12) + 1;
+		collect.green = Math.floor(Math.random() * 12) + 1;
+		collect.blue = Math.floor(Math.random() * 12) + 1;
+
 		statusDisplay.html("Start collecting!");
 		goalDisplay.html(collect.goal);
 		scoreDisplay.html(collect.score);
@@ -69,8 +70,6 @@
 			wins++;
 			winDisplay.html(wins);
 			setTimeout(reset,3000);
-			game.score = 0;
-
 
 		} else if(collect.score > collect.goal){
 			statusDisplay.html("<span class='text-danger'>Busted! You went over " + collect.goal + "</span>");
