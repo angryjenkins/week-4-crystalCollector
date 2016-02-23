@@ -1,0 +1,13 @@
+header {
+	text-align: center;
+	padding: 60px;
+}
+
+ul>li{
+	padding: 40px;
+}
+
+ul>li:hover{
+	border-top: 6px solid #727171;
+	border-bottom: 3px solid #727171;
+}
