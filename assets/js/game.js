@@ -80,7 +80,7 @@
 			setTimeout(reset,3000);
 
 		} else {
-			if (collect.goal - collect.score < 20){
+			if (collect.goal - collect.score < 21){
 				statusDisplay.html("<span class='text-warning'>You are getting dangerously close to "+collect.goal + "...</span>");
 			} else {
 			statusDisplay.html("<span class='text-info'>You still have a ways to go to reach "+collect.goal + "...</span>");

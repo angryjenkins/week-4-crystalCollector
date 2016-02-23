@@ -9,6 +9,8 @@ body {
 
 h1 {
 	font-size: 30px;
+	font-family: monospace;
+	color: orange;
 }
 
 header {
@@ -40,4 +42,10 @@ img.crystal {
 }
 ul>li:hover{
 	border-bottom: 8px solid #727171;
+}
+
+#goal, #score, #wins, #losses, #status {
+	color: orange;
+	font-size: 30px;
+	font-family: monospace;
 }
