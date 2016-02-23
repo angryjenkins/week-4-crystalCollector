@@ -83,7 +83,7 @@
 			if (collect.goal - collect.score < 20){
 				statusDisplay.html("<span class='text-warning'>You are getting dangerously close to "+collect.goal + "...</span>");
 			} else {
-			statusDisplay.html("<span class='text-info'>You still have a ways to go to reach "+collect.goal + "</span>");
+			statusDisplay.html("<span class='text-info'>You still have a ways to go to reach "+collect.goal + "...</span>");
 			}
 		}
 	});
