@@ -22,18 +22,22 @@ header {
 
 .gems {
 	margin: 24px;
-	height:200px;
-	/*background-image: url("../../assets/img/background_img.jpg");*/
+	height:300px;
+	background-image: url("../../assets/img/background_img.jpg");
 }
+
 ul {
 	background-repeat: repeat;
 }
 
 ul>li{
-	padding: 40px;
+	padding: 30px;
 }
 
+img.crystal {
+	width: 100px;
+	height: auto;
+}
 ul>li:hover{
-	border-top: 3px solid #727171;
-	border-bottom: 3px solid #727171;
+	border-bottom: 8px solid #727171;
 }

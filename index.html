@@ -16,12 +16,19 @@
 		<h1>Crystals Collector!</h1>
 	</header>
 	<div class="row">
-		<div class="alert alert-info instructions">
-			<p>You will be given a random number at the start of the game.</p>
-			<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-			<p>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</p>
-			<p>The value of each crystal is hidden from you until you click on it.</p>
-			<p>Each time the game restarts, a new target number and gem values will be assigned.</p>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2>The Rules.</h2>
+			</div>
+			<div class="panel-body">
+				<ol>
+					<li>You will be given a random number at the start of the game.</li>
+					<li>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+					<li>You win the game by matching your total score to the random number. You lose if your total score goes above the random number.</li>
+					<li>The value of each crystal is hidden from you until you click on it.</li>
+					<li>Each time the game restarts, a new target number and gem values will be assigned.</li>
+				</ol>
+			</div>
 		</div>
 	</div>
 </div>
@@ -39,27 +46,31 @@
 </div>
 <div class="container">
 	<div class="row scoreboard">
-		<div class="col-md-6">
+		<div class="col-md-12">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h2>Goal</h2>
+					<h2>Scoreboard</h2>
 				</div>
 				<div class="panel-body">
-					<div id="goal"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h2>Your Total Score</h2>
-				</div>
-				<div class="panel-body">
-					<div id="score"></div>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Your Goal</th>
+								<th>Your Collection</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="goal">--</td>
+								<td id="score">--</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="row results">
 		<div class="col-md-6">
 			<p id="status"></p>
